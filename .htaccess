@@ -1,0 +1,13 @@
+RewriteEngine On
+ExpiresActive On
+
+#
+# clean URLs
+#
+RewriteBase /
+RewriteRule ^(\w+)/?$ index.php?q=$1 [L,QSA]
+
+#
+# set cache
+#
+#ExpiresByType text/html "access plus 2592000 seconds"
