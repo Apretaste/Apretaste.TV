@@ -12,10 +12,10 @@
 
 	<script type="text/javascript">
 		setTimeout(function(){
-			<?php if(empty($_GET['q'])) { ?>
+			<?php if(empty($_GET['c'])) { ?>
 				window.location = 'https://www.youtube.com/apretaste';
 			<?php } else { ?>
-				window.location = 'https://www.youtube.com/watch?v=<?= $_GET['q'] ?>';
+				window.location = 'https://www.youtube.com/watch?v=<?= str_replace('_', '', $_GET['c']) ?>';
 			<?php } ?>
 		}, 1000);
 	</script>
