@@ -14,6 +14,9 @@
 		setTimeout(function(){
 			<?php if(empty($_GET['c'])) { ?>
 				window.location = 'https://www.youtube.com/apretaste';
+			<?php } elseif($_GET['c'] == 'chat') { ?>
+				console.log("chat")
+				window.location = 'https://t.me/ApretasteCuba';
 			<?php } else { ?>
 				window.location = 'https://www.youtube.com/watch?v=<?= str_replace('_', '', $_GET['c']) ?>';
 			<?php } ?>
